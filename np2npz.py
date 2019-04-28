@@ -14,4 +14,4 @@ loaded_outfile = np.load("features.npz")
 print(loaded_outfile.files) # contains dict with array names
 print(loaded_outfile['x'])
 print(loaded_outfile['y'])
-print(loaded_outfile['z'])
+print(loaded_outfile['features'])
