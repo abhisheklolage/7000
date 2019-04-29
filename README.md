@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## Datasets
 
 ### Caltech-256 
