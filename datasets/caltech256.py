@@ -26,7 +26,7 @@ def get_images(QUERY):
     training_images = [[]]
     query_images    = [[]]
     dataset_ptr     = 0
-    for cat in range(1, 257 + 1): # 257 labels
+    for cat in range(1, 258): # 257 labels
         print("Splitting category#", cat)
         num_queries = int(stats[cat] * QUERY)
 
@@ -40,10 +40,10 @@ def get_images(QUERY):
         dataset_ptr += stats[cat]
 
 
-    for cat in range(1, 257 + 1):
+    for cat in range(1, 258):
         print("Checking for category#", cat)
-        print(len(query_images[cat - 1]), len(training_images[cat - 1]), stats[cat])
-        assert(len(query_images[cat - 1]) + len(training_images[cat - 1]) == stats[cat])
+        print(len(query_images[cat]), len(training_images[cat]), stats[cat])
+        assert(len(query_images[cat]) + len(training_images[cat]) == stats[cat])
     print("Splitting done")
 
     return training_images, query_images
