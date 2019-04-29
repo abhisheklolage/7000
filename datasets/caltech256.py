@@ -6,8 +6,9 @@ import datautils
 
 def get_images(QUERY):
     '''
-    Returns a list of image paths and the category (sorted by category) that it belongs to
-    and returns category stats (category #: count)
+    Returns training, querying dataset as a list of lists, where inner list is
+    of categories. Category starts from index 1 and not 0. This just gives list
+    of paths.
     '''
     labels           = []
     dataset          = []
@@ -22,8 +23,8 @@ def get_images(QUERY):
         dataset.append([image_path, label])
     dataset = sorted(dataset, key = lambda x: x[1])
 
-    training_images = []
-    query_images    = []
+    training_images = [[]]
+    query_images    = [[]]
     dataset_ptr     = 0
     for cat in range(1, 257 + 1): # 257 labels
         print("Splitting category#", cat)
