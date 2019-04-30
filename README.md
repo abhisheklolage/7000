@@ -7,6 +7,9 @@ features.ipynb
 
 similarity.ipynb
 
+results\_quadsketch.ipynb contains eval for Plain Embeddings and Quadsketch
+results\_grid.ipynb contains evaluation for Grid
+
 ### Offline files
 
 
